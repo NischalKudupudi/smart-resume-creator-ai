@@ -1,4 +1,3 @@
-
 import { Link } from "react-router-dom";
 
 const Footer = () => {
@@ -7,7 +6,7 @@ const Footer = () => {
       <div className="container mx-auto px-4 md:px-6">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div>
-            <Link to="/" className="text-2xl font-bold text-white">ResumeAI</Link>
+            <Link to="/" className="text-2xl font-bold text-white">CVision AI</Link>
             <p className="mt-4 text-gray-400">
               Building better resumes with the power of artificial intelligence. Stand out from the crowd and land your dream job.
             </p>
@@ -95,7 +94,7 @@ const Footer = () => {
         </div>
         
         <div className="border-t border-gray-800 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
-          <p className="text-sm text-gray-500">&copy; {new Date().getFullYear()} ResumeAI. All rights reserved.</p>
+          <p className="text-sm text-gray-500">&copy; {new Date().getFullYear()} CVision AI. All rights reserved.</p>
           <div className="flex space-x-6 mt-4 md:mt-0">
             <a href="#" className="text-sm text-gray-500 hover:text-gray-400 transition-colors">
               Privacy Policy
