@@ -54,9 +54,9 @@ export default {
 					foreground: 'hsl(var(--card-foreground))'
 				},
 				resume: {
-					primary: '#1E40AF',
-					secondary: '#3B82F6',
-					accent: '#93C5FD',
+					primary: '#10803F', // Changed from blue (#1E40AF) to green
+					secondary: '#34D399', // Changed from blue (#3B82F6) to green
+					accent: '#86EFAC', // Changed from blue (#93C5FD) to green
 					background: '#F3F4F6',
 					text: '#1F2937'
 				},
