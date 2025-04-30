@@ -17,7 +17,11 @@ const Navbar = () => {
         <div className="flex items-center justify-between h-16">
           <div className="flex items-center">
             <Link to="/" className="flex items-center">
-              <span className="text-2xl font-bold text-resume-primary">ProFile AI</span>
+              <span className="text-2xl font-bold">
+                <span className="text-blue-600">Pro</span>
+                <span className="text-red-500">File</span>
+                <span className="text-resume-primary"> AI</span>
+              </span>
             </Link>
           </div>
           
