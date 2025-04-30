@@ -250,11 +250,11 @@ const ResumeBuilder = () => {
                   </Button>
                   
                   {activeTab === "projects" ? (
-                    <Button onClick={handleGenerateResume}>
+                    <Button variant="green" onClick={handleGenerateResume}>
                       Generate Resume
                     </Button>
                   ) : (
-                    <Button onClick={handleNext}>
+                    <Button variant="green" onClick={handleNext}>
                       Next
                     </Button>
                   )}
@@ -275,7 +275,7 @@ const ResumeBuilder = () => {
                 
                 {showPreview && (
                   <div className="mt-6 flex flex-col sm:flex-row gap-4">
-                    <Button onClick={handleDownload} className="bg-resume-primary hover:bg-resume-primary/90">
+                    <Button className="bg-resume-primary hover:bg-resume-primary/90">
                       Download PDF
                     </Button>
                     <Button variant="outline" onClick={() => setTemplate(template === "professional" ? "modern" : "professional")}>
