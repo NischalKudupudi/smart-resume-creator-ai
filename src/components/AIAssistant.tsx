@@ -46,6 +46,18 @@ const AIAssistant = ({ resumeData, setResumeData, activeSection }: AIAssistantPr
         if (experienceIndex >= 0) {
           const newHighlights = generateBulletPoints(resumeData.experience[experienceIndex], prompt);
           updatedData.experience[experienceIndex].highlights = newHighlights;
+        } else {
+          // If no valid experience entries yet, update the first one
+          updatedData.experience[0].highlights = generateBulletPoints({...updatedData.experience[0], position: "professional"}, prompt);
+        }
+      }
+      else if (activeSection === "education") {
+        const educationIndex = resumeData.education.findIndex(edu => edu.institution);
+        if (educationIndex >= 0) {
+          updatedData.education[educationIndex].description = generateEducationDescription(prompt);
+        } else {
+          // If no valid education entries yet, update the first one
+          updatedData.education[0].description = generateEducationDescription(prompt);
         }
       }
       else if (activeSection === "skills") {
@@ -53,6 +65,28 @@ const AIAssistant = ({ resumeData, setResumeData, activeSection }: AIAssistantPr
           updatedData.skills.technical = generateTechnicalSkills(prompt);
         } else if (prompt.toLowerCase().includes("soft")) {
           updatedData.skills.soft = generateSoftSkills(prompt);
+        } else if (prompt.toLowerCase().includes("language")) {
+          updatedData.skills.languages = generateLanguageSkills(prompt);
+        } else if (prompt.toLowerCase().includes("certification")) {
+          updatedData.skills.certifications = generateCertifications(prompt);
+        } else {
+          // Default to technical skills if not specified
+          updatedData.skills.technical = generateTechnicalSkills(prompt);
+        }
+      }
+      else if (activeSection === "projects") {
+        const projectIndex = resumeData.projects.findIndex(proj => proj.name);
+        if (projectIndex >= 0) {
+          const newHighlights = generateProjectHighlights(prompt);
+          updatedData.projects[projectIndex].highlights = newHighlights;
+          // Also update the description if it's empty
+          if (!updatedData.projects[projectIndex].description) {
+            updatedData.projects[projectIndex].description = generateProjectDescription(prompt);
+          }
+        } else {
+          // If no valid project entries yet, update the first one
+          updatedData.projects[0].highlights = generateProjectHighlights(prompt);
+          updatedData.projects[0].description = generateProjectDescription(prompt);
         }
       }
       
@@ -87,6 +121,10 @@ const AIAssistant = ({ resumeData, setResumeData, activeSection }: AIAssistantPr
     ];
   };
 
+  const generateEducationDescription = (prompt: string) => {
+    return `Completed coursework with distinction in advanced topics relevant to my field. Participated in research projects and extracurricular activities that enhanced my practical skills and theoretical knowledge. Received academic honors for outstanding performance.`;
+  };
+
   const generateTechnicalSkills = (prompt: string) => {
     return [
       "JavaScript",
@@ -110,6 +148,36 @@ const AIAssistant = ({ resumeData, setResumeData, activeSection }: AIAssistantPr
       "Critical Thinking",
       "Time Management",
     ];
+  };
+
+  const generateLanguageSkills = (prompt: string) => {
+    return [
+      "English (Native)",
+      "Spanish (Intermediate)",
+      "French (Basic)",
+    ];
+  };
+
+  const generateCertifications = (prompt: string) => {
+    return [
+      "AWS Certified Solutions Architect",
+      "Project Management Professional (PMP)",
+      "Certified Scrum Master",
+      "Google Analytics Certification",
+    ];
+  };
+
+  const generateProjectHighlights = (prompt: string) => {
+    return [
+      "Designed and implemented key features that improved user engagement by 40%",
+      "Collaborated with cross-functional teams to deliver the project 2 weeks ahead of schedule",
+      "Optimized codebase resulting in 30% faster load times and improved performance",
+      "Implemented automated testing that reduced bugs in production by 25%",
+    ];
+  };
+
+  const generateProjectDescription = (prompt: string) => {
+    return `An innovative project designed to solve real-world problems through the application of modern technologies and methodologies. This project demonstrates both technical expertise and creative problem-solving abilities.`;
   };
 
   // Suggestion prompts based on active section
