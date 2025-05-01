@@ -56,7 +56,7 @@ const Features = () => {
         </div>
         
         <div className="mt-16 bg-resume-primary/5 rounded-lg p-6 md:p-8">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+          <div className="grid grid-cols-1 gap-8 items-center">
             <div>
               <h3 className="text-2xl font-bold text-resume-primary mb-4">Why Choose Our Resume Builder?</h3>
               <ul className="space-y-3">
@@ -73,19 +73,6 @@ const Features = () => {
                   </li>
                 ))}
               </ul>
-            </div>
-            <div className="bg-white p-6 rounded-lg shadow-md">
-              <h4 className="text-lg font-semibold mb-3 text-resume-text">What Our Users Say</h4>
-              <blockquote className="italic text-gray-600 mb-4">
-                "I spent hours trying to write my resume before finding this tool. The AI suggestions were spot-on and helped me highlight achievements I wouldn't have thought to include!"
-              </blockquote>
-              <div className="flex items-center">
-                <div className="w-10 h-10 bg-resume-secondary rounded-full flex items-center justify-center text-white font-semibold">JS</div>
-                <div className="ml-3">
-                  <div className="font-medium text-resume-text">Jamie Smith</div>
-                  <div className="text-sm text-gray-500">Marketing Specialist</div>
-                </div>
-              </div>
             </div>
           </div>
         </div>
