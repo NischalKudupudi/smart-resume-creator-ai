@@ -996,11 +996,11 @@ const TechnicalTemplate = ({ data }: { data: ResumeData }) => {
           <p className="text-gray-700 mb-2">{data.personal.title}</p>
         )}
         <div className="flex flex-wrap gap-y-1 gap-x-4 text-sm text-gray-600">
-          {data.personal.email && <p><span className="text-resume-primary">>></span> {data.personal.email}</p>}
-          {data.personal.phone && <p><span className="text-resume-primary">>></span> {data.personal.phone}</p>}
-          {data.personal.location && <p><span className="text-resume-primary">>></span> {data.personal.location}</p>}
-          {data.personal.website && <p><span className="text-resume-primary">>></span> {data.personal.website}</p>}
-          {data.personal.linkedin && <p><span className="text-resume-primary">>></span> {data.personal.linkedin}</p>}
+          {data.personal.email && <p><span className="text-resume-primary">{'>>'}</span> {data.personal.email}</p>}
+          {data.personal.phone && <p><span className="text-resume-primary">{'>>'}</span> {data.personal.phone}</p>}
+          {data.personal.location && <p><span className="text-resume-primary">{'>>'}</span> {data.personal.location}</p>}
+          {data.personal.website && <p><span className="text-resume-primary">{'>>'}</span> {data.personal.website}</p>}
+          {data.personal.linkedin && <p><span className="text-resume-primary">{'>>'}</span> {data.personal.linkedin}</p>}
         </div>
       </div>
 
@@ -1056,7 +1056,7 @@ const TechnicalTemplate = ({ data }: { data: ResumeData }) => {
                   <ul className="mt-1 list-none text-gray-700">
                     {exp.highlights.map((highlight, idx) => 
                       highlight && <li key={idx} className="ml-2 pl-2 border-l border-resume-primary/30">
-                        <span className="text-resume-primary">></span> {highlight}
+                        <span className="text-resume-primary">{'>'}</span> {highlight}
                       </li>
                     )}
                   </ul>
@@ -1096,7 +1096,7 @@ const TechnicalTemplate = ({ data }: { data: ResumeData }) => {
                   <ul className="mt-1 list-none text-gray-700">
                     {proj.highlights.map((highlight, idx) => 
                       highlight && <li key={idx} className="ml-2 pl-2 border-l border-resume-primary/30">
-                        <span className="text-resume-primary">></span> {highlight}
+                        <span className="text-resume-primary">{'>'}</span> {highlight}
                       </li>
                     )}
                   </ul>
