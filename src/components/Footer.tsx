@@ -1,3 +1,4 @@
+
 import { Link } from "react-router-dom";
 
 const Footer = () => {
@@ -68,8 +69,8 @@ const Footer = () => {
             <h3 className="text-lg font-semibold mb-4">Contact</h3>
             <ul className="space-y-2 text-gray-400">
               <li>
-                <a href="mailto:support@resumeai.com" className="hover:text-white transition-colors">
-                  support@resumeai.com
+                <a href="mailto:support@profileai.com" className="hover:text-white transition-colors">
+                  support@profileai.com
                 </a>
               </li>
               <li>
