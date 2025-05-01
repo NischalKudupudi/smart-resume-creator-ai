@@ -207,7 +207,7 @@ const ProfessionalTemplate = ({ data }: { data: ResumeData }) => {
       )}
 
       <div className="mt-6 text-xs text-center text-gray-400">
-        Created with ResumeAI
+        Created with ProFile AI
       </div>
     </div>
   );
@@ -418,7 +418,7 @@ const ModernTemplate = ({ data }: { data: ResumeData }) => {
       </div>
 
       <div className="mt-8 text-xs text-center text-gray-400">
-        Created with ResumeAI
+        Created with ProFile AI
       </div>
     </div>
   );

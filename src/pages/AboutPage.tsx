@@ -13,7 +13,7 @@ const AboutPage = () => {
         <section className="bg-resume-primary text-white py-16">
           <div className="container mx-auto px-4 md:px-6">
             <div className="max-w-3xl mx-auto text-center">
-              <h1 className="text-3xl md:text-4xl font-bold mb-4">About ResumeAI</h1>
+              <h1 className="text-3xl md:text-4xl font-bold mb-4">About ProFile AI</h1>
               <p className="text-xl opacity-90">
                 Building better resumes with the power of artificial intelligence
               </p>
@@ -26,7 +26,7 @@ const AboutPage = () => {
             <div className="max-w-3xl mx-auto">
               <h2 className="text-2xl font-bold text-resume-text mb-6">Our Mission</h2>
               <p className="text-gray-700 mb-6">
-                At ResumeAI, we believe that everyone deserves access to professional-quality resume tools 
+                At ProFile AI, we believe that everyone deserves access to professional-quality resume tools 
                 that can help them land their dream job. Our mission is to democratize the job application 
                 process by leveraging artificial intelligence to help job seekers create polished, 
                 ATS-friendly resumes that highlight their unique skills and experiences.
@@ -39,7 +39,7 @@ const AboutPage = () => {
               </p>
               <p className="text-gray-700">
                 Whether you're a recent graduate, a seasoned professional, or someone changing careers, 
-                ResumeAI provides the tools you need to create a resume that stands out and gets noticed.
+                ProFile AI provides the tools you need to create a resume that stands out and gets noticed.
               </p>
             </div>
           </div>
@@ -48,7 +48,7 @@ const AboutPage = () => {
         <section className="py-16 bg-gray-50">
           <div className="container mx-auto px-4 md:px-6">
             <div className="max-w-3xl mx-auto">
-              <h2 className="text-2xl font-bold text-resume-text mb-6">The ResumeAI Advantage</h2>
+              <h2 className="text-2xl font-bold text-resume-text mb-6">The ProFile AI Advantage</h2>
               
               <div className="space-y-8">
                 <div>
@@ -84,7 +84,7 @@ const AboutPage = () => {
                   <h3 className="text-xl font-semibold text-resume-primary mb-3">Continuous Improvement</h3>
                   <p className="text-gray-700">
                     We're constantly updating our AI models and resume templates based on the latest hiring 
-                    trends and feedback from recruiters. When you use ResumeAI, you can be confident that 
+                    trends and feedback from recruiters. When you use ProFile AI, you can be confident that 
                     your resume reflects current best practices in the job market.
                   </p>
                 </div>
@@ -99,7 +99,7 @@ const AboutPage = () => {
               <h2 className="text-2xl font-bold text-resume-text mb-6">Start Building Your Resume Today</h2>
               <p className="text-gray-700 mb-8">
                 Ready to create a professional, ATS-friendly resume that will help you land your dream job? 
-                Get started with ResumeAI today and see the difference our AI-powered platform can make.
+                Get started with ProFile AI today and see the difference our AI-powered platform can make.
               </p>
               <Button asChild size="lg" className="bg-resume-primary hover:bg-resume-primary/90">
                 <Link to="/builder">
